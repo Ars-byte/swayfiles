@@ -1,0 +1,68 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 24,
+    "margin-top": 6,
+    "margin-left": 8,
+    "margin-right": 8,
+    "ipc": true,
+    "spacing": 0,
+    "modules-left": ["sway/workspaces", "custom/cava"],
+    "modules-right": ["tray", "network", "backlight", "pulseaudio", "memory", "cpu", "battery", "clock", "custom/poweroff"],
+    "sway/workspaces": {
+        "format": "{name}",
+        "on-click": "activate",
+        "sort-by-number": true
+    },
+    "custom/cava": {
+        "exec": "~/.config/waybar/scripts/cava.sh",
+        "format": "{}",
+        "restart-interval": 2
+    },
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon} {percent}%",
+        "format-icons": ["󰃞", "󰃟", "󰃠"]
+    },
+    "battery": {
+        "states": { "warning": 30, "critical": 15 },
+        "format": "{icon} {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰖁 MUTED",
+        "format-icons": { "default": ["󰕿", "󰖀", "󰕾"] },
+        "on-click": "pavucontrol"
+    },
+    "network": {
+        "format-wifi": "󰤨 {essid}",
+        "format-ethernet": "󰈀 {ipaddr}",
+        "format-disconnected": "󰤭 SIN RED",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "󰆼 {used:0.1f}G",
+        "interval": 5
+    },
+    "cpu": {
+        "format": "󰻠 {usage}%",
+        "interval": 5
+    },
+    "clock": {
+        "timezone": "America/Argentina/Buenos_Aires",
+        "format": "󰥔 {:%H:%M}",
+        "format-alt": "󰃭 {:%Y-%m-%d}",
+        "tooltip": false
+    },
+    "tray": {
+        "icon-size": 14,
+        "spacing": 8
+    },
+    "custom/poweroff": {
+        "format": "󰐥",
+        "on-click": "bash ~/.config/waybar/scripts/poweroff.sh",
+        "tooltip": false
+    }
+}

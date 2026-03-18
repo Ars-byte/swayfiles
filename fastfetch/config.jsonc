@@ -1,0 +1,42 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": null,
+    "display": {
+        "separator": " ›  "
+    },
+   
+    "modules": [
+        "break",
+        {
+            "type": "os",
+            "key": "OS  ",
+            "keyColor": "37" 
+        },
+        {
+            "type": "kernel",
+            "key": "KER ",
+            "keyColor": "37"
+        },
+        {
+            "type": "packages",
+            "key": "PKG ",
+            "keyColor": "37"
+        },
+        {
+            "type": "shell",
+            "key": "SH  ",
+            "keyColor": "37"
+        },
+        {
+            "type": "terminal",
+            "key": "TER ",
+            "keyColor": "37"
+        },
+        {
+            "type": "wm",
+            "key": "WM  ",
+            "keyColor": "37"
+        },
+        "break"
+    ]
+}
